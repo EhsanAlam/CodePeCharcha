@@ -8,6 +8,7 @@ public class CpcApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CpcApplication.class, args);
+		System.out.println("CPC application started");
 	}
 
 }
