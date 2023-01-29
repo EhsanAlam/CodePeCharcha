@@ -1,5 +1,7 @@
-package com.cpc.CodePeCharcha;
+package com.cpc.CodePeCharcha.controller;
 
+import com.cpc.CodePeCharcha.service.LoginInterface;
+import com.cpc.CodePeCharcha.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

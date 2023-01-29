@@ -1,4 +1,6 @@
-package com.cpc.CodePeCharcha;
+package com.cpc.CodePeCharcha.service;
+
+import com.cpc.CodePeCharcha.model.User;
 
 import java.util.Collection;
 
