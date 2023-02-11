@@ -56,10 +56,21 @@ public class MappingService {
     public List<InstCourseDetails> getDetailsOfAllInstWithCourse() {
         List<InstCourseDetails> list = new ArrayList<>();
 
-        List<Instructor> instructorList=instructorRepository.getAllInstructor();
-        for (Instructor instructor:instructorList){
+        List<Instructor> instructorList = instructorRepository.getAllInstructor();
+        for (Instructor instructor : instructorList) {
             InstCourseDetails courseDetails = getInstCourseDetails(instructor.getId());
             list.add(courseDetails);
+        }
+        return list;
+    }
+
+    public List<CourseInstDetails> getDetailsOfAllCourseWithInst() {
+        List<CourseInstDetails> list = new ArrayList<>();
+
+        List<Course> coursesList = (List<Course>) courseRepository.getAllCourse();
+        for (Course course : coursesList) {
+            CourseInstDetails courseInstDetails = getCourseInstDetails(course.getCourseId());
+            list.add(courseInstDetails);
         }
         return list;
     }

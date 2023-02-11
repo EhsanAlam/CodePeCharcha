@@ -23,36 +23,36 @@ public class Course {
         return courseId;
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
-    }
-
     public String getCourseName() {
         return courseName;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
     }
 
     public String getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
     public String getFees() {
         return fees;
     }
 
-    public void setFees(String fees) {
-        this.fees = fees;
-    }
-
     public String getDescription() {
         return description;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public void setFees(String fees) {
+        this.fees = fees;
     }
 
     public void setDescription(String description) {

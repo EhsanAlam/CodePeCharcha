@@ -34,5 +34,10 @@ public class instCourseMappingController {
     public List<InstCourseDetails> getDetailsOfAllInstWithCourse(){
         return mappingService.getDetailsOfAllInstWithCourse();
     }
+    @GetMapping("/getDetailsOfAllCourseWithInst")
+    public List<CourseInstDetails> getDetailsOfAllCourseWithInst(){
+        return mappingService.getDetailsOfAllCourseWithInst();
+    }
+
 
 }

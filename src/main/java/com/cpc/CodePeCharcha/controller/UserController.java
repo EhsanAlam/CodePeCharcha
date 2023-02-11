@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping("/updateUser")
-    public String updateUser(@RequestBody User users){
+    public String updateUser(@RequestBody User users) {
         return userService.updateUser(users);
     }
 
