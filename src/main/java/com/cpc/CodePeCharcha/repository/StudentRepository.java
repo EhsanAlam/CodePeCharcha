@@ -14,6 +14,12 @@ public class StudentRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    public  List<String> allComment(String studentId) {
+        String query = "select commentStudnt from commentStudent where studentId ='"+studentId+"'";
+         return jdbcTemplate.queryForList(query,String.class);
+
+    }
+
     public String addStudent(Student student) {
         String query = "Insert into Student values(" + getStudentParam(student) + ")";
         jdbcTemplate.update(query);

@@ -3,9 +3,11 @@ package com.cpc.CodePeCharcha.service;
 import com.cpc.CodePeCharcha.model.Response;
 import com.cpc.CodePeCharcha.model.Student;
 import com.cpc.CodePeCharcha.model.StudentComment;
+import com.cpc.CodePeCharcha.model.StudentCommentDetail;
 import com.cpc.CodePeCharcha.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -62,4 +64,16 @@ public class StudentService {
         return "Response has been sent on your email Id, please check your email";
     }
 
+    public List<String> allComment(String studentId) {
+        return studentRepository.allComment(studentId);
+    }
+
+
+    public StudentCommentDetail getStudentCommentDetail(String id) {
+
+        Student student = studentRepository.getStudentById(id);
+        List<String> comment= studentRepository.allComment(id);
+        StudentCommentDetail studentCommentDetail=new StudentCommentDetail(student,comment);
+        return studentCommentDetail;
+    }
 }
